@@ -10,6 +10,14 @@ public class Main {
         bintree.insert(19);
         bintree.insert(15);
         bintree.insert(3);
-        bintree.search(bintree.getRoot(), 12);
+        bintree.insert(3);
+        bintree.print(bintree.getRoot());
+        Node apunode = bintree.search(bintree.getRoot(), 14);
+        if (apunode != null) {
+            System.out.println("Löytyi!");
+        }
+        else {
+            System.out.println("Ei löytynyt.");
+        }
     }
 }

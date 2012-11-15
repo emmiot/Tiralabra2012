@@ -12,6 +12,11 @@ public class BinaryTree {
         this.size = 0;
     }
 
+    public BinaryTree(int value) {
+        this.size = 0;
+        this.insert(value);
+    }
+
     /**
      * Lisää halutun alkion.
      */
@@ -19,11 +24,9 @@ public class BinaryTree {
         if (root == null) {
             root = new Node(value);
             size++;
-        }
-        else if (search(root, value) != null) {
+        } else if (search(root, value) != null) {
             System.out.println("Arvo oli jo puussa.");
-        }
-        else {
+        } else {
             Node node = root;
             Node parent = null;
             while (node != null) {
@@ -46,9 +49,46 @@ public class BinaryTree {
     }
 
     /**
-     * Poistaa halutun alkion.
+     * Poistaa halutun alkion, jos sellainen löytyy puusta, muuten ei tee mitään.
      */
-    public void delete() {
+    public void delete(int value) {
+        Node node = search(this.root, value);
+        if (node != null) {
+            if (node.left == null && node.right == null) {
+                deleteNoChildren(node);
+            } else if (node.left == null || node.right == null) {
+                deleteOneChild(node);
+            } else {
+                deleteTwoChildren(node);
+            }
+        }
+    }
+
+    /**
+     * Poisto tapauksessa että poistettavalla ei ole lapsia.
+     *
+     * @param node
+     */
+    private void deleteNoChildren(Node node) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    /**
+     * Poisto tapauksessa poistettavalla yksi lapsi.
+     *
+     * @param node
+     */
+    private void deleteOneChild(Node node) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    /**
+     * Poisto tapauksessa poistettavalla kaksi lasta.
+     *
+     * @param node
+     */
+    private void deleteTwoChildren(Node node) {
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 
     /**
@@ -60,12 +100,11 @@ public class BinaryTree {
         }
         if (value < node.getKey()) {
             return search(node.left, value);
-        }
-        else {
+        } else {
             return search(node.right, value);
         }
     }
-    
+
     /**
      * Laskee puun korkeuden, kun annetaan syötteeksi juurisolmu.
      */
@@ -77,41 +116,42 @@ public class BinaryTree {
         int heightRight = getHeight(node.right);
         if (heightLeft > heightRight) {
             return heightLeft + 1;
-        }
-        else {
+        } else {
             return heightRight + 1;
         }
     }
-    
+
     /**
      * Palauttaa syötteeksi saadun solmun alipuiden pienimmän arvon.
+     *
      * @param node
-     * @return 
+     * @return
      */
-    public int min(Node node) {
+    public Node min(Node node) {
         while (node.left != null) {
             node = node.left;
         }
-        return node.getKey();
+        return node;
     }
-    
+
     /**
      * Palauttaa syötteeksi saadun solmun alipuiden suurimman arvon.
+     *
      * @param node
-     * @return 
+     * @return
      */
-    public int max(Node node) {
+    public Node max(Node node) {
         while (node.right != null) {
             node = node.right;
         }
-        return node.getKey();
+        return node;
     }
 
     /**
      * Tulostaa puun alkiot järjestyksessä.
      */
     public void print(Node node) {
-        if (node == null) {
+        if (node != null) {
             print(node.left);
             System.out.println(node.getKey());
             print(node.right);
@@ -122,7 +162,39 @@ public class BinaryTree {
         return root;
     }
 
-    public void setRoot(Node root) {
-        this.root = root;
+    /**
+     * Sisäjärjestysläpikäynti.
+     * @param node 
+     */
+    public void inorder(Node node) {
+        if (node != null) {
+            inorder(node.left);
+            System.out.println(node.getKey());
+            inorder(node.right);
+        }
+    }
+
+    /**
+     * Esijärjestysläpikäynti.
+     * @param node 
+     */
+    public void preorder(Node node) {
+        if (node != null) {
+            System.out.println(node.getKey());
+            preorder(node.left);
+            preorder(node.right);
+        }
+    }
+
+    /**
+     * Jälkijärjestysläpikäynti.
+     * @param node 
+     */
+    public void postorder(Node node) {
+        if (node != null) {
+            postorder(node.left);
+            postorder(node.right);
+            System.out.println(node.getKey());
+        }
     }
 }
