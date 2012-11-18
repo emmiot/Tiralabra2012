@@ -6,6 +6,12 @@ public class Node {
     Node right;
     Node parent;
     int key;
+    
+    public Node() {
+        this.left = null;
+        this.right = null;
+        this.parent = null;
+    }
 
     /**
      * Konstruktori. Asettaa avaimen arvon halutuksi. Asettaa vanhemman sekä oikean ja vasemman lapsen tyhjiksi.

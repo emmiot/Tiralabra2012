@@ -61,6 +61,7 @@ public class BinaryTree {
             } else {
                 deleteTwoChildren(node);
             }
+            size --;
         }
     }
 
@@ -70,7 +71,16 @@ public class BinaryTree {
      * @param node
      */
     private void deleteNoChildren(Node node) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        Node parent = node.getParent();
+        if (parent == null) {
+            this.root = null;
+        }
+        else if (node == parent.left) {
+            parent.left = null;
+        }
+        else {
+            parent.right = null;
+        }
     }
 
     /**
@@ -79,7 +89,24 @@ public class BinaryTree {
      * @param node
      */
     private void deleteOneChild(Node node) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        Node child = new Node();
+        if (node.left != null) {
+            child = node.getLeft();
+        }
+        else {
+            child = node.getRight();
+        }
+        Node parent = node.getParent();
+        child.setParent(parent);
+        if (parent == null) {
+            this.root = child;
+        }
+        if (node == parent.left) {
+            parent.setLeft(child);
+        }
+        if (node == parent.right) {
+            parent.setRight(child);
+        }
     }
 
     /**
@@ -88,7 +115,18 @@ public class BinaryTree {
      * @param node
      */
     private void deleteTwoChildren(Node node) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        Node follower = min(node.right);
+        node.setKey(follower.getKey());
+        Node child = follower.right;
+        Node parent = follower.parent;
+        if (parent.left == follower) {
+            parent.setLeft(child);
+        } else {
+            parent.setRight(child);
+        }
+        if (child != null) {
+            child.setParent(parent);
+        }
     }
 
     /**
@@ -196,5 +234,9 @@ public class BinaryTree {
             postorder(node.right);
             System.out.println(node.getKey());
         }
+    }
+    
+    public int getSize() {
+        return this.size;
     }
 }
