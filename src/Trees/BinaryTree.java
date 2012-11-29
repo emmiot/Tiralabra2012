@@ -2,8 +2,8 @@ package Trees;
 
 public class BinaryTree {
 
-    Node root;
-    int size;
+    private Node root;
+    private int size;
 
     /**
      * Konstruktori. Asettaa puun kokoindikaattorin nollaksi.
@@ -12,13 +12,17 @@ public class BinaryTree {
         this.size = 0;
     }
 
-    public BinaryTree(int value) {
+    /**
+     * Kuormitettu konstruktori, jolle voidaan antaa arvo, joka asetetaan juureksi.
+     * @param rootValue 
+     */
+    public BinaryTree(int rootValue) {
         this.size = 0;
-        this.insert(value);
+        this.insert(rootValue);
     }
 
     /**
-     * Lisää halutun alkion.
+     * Lisää halutun alkion ja kasvattaa puun kokoa. Jos alkio on jo puussa, ei tehdä mitään.
      */
     public void insert(int value) {
         if (root == null) {
@@ -32,9 +36,9 @@ public class BinaryTree {
             while (node != null) {
                 parent = node;
                 if (value < node.getKey()) {
-                    node = node.left;
+                    node = node.getLeft();
                 } else {
-                    node = node.right;
+                    node = node.getRight();
                 }
             }
             Node newNode = new Node(value);
@@ -54,9 +58,9 @@ public class BinaryTree {
     public void delete(int value) {
         Node node = search(this.root, value);
         if (node != null) {
-            if (node.left == null && node.right == null) {
+            if (node.getLeft() == null && node.getRight() == null) {
                 deleteNoChildren(node);
-            } else if (node.left == null || node.right == null) {
+            } else if (node.getLeft() == null || node.getRight() == null) {
                 deleteOneChild(node);
             } else {
                 deleteTwoChildren(node);
@@ -75,11 +79,11 @@ public class BinaryTree {
         if (parent == null) {
             this.root = null;
         }
-        else if (node == parent.left) {
-            parent.left = null;
+        else if (node == parent.getLeft()) {
+            parent.setLeft(null);
         }
         else {
-            parent.right = null;
+            parent.setRight(null);
         }
     }
 
@@ -89,8 +93,8 @@ public class BinaryTree {
      * @param node
      */
     private void deleteOneChild(Node node) {
-        Node child = new Node();
-        if (node.left != null) {
+        Node child;
+        if (node.getLeft() != null) {
             child = node.getLeft();
         }
         else {
@@ -101,10 +105,10 @@ public class BinaryTree {
         if (parent == null) {
             this.root = child;
         }
-        if (node == parent.left) {
+        if (node == parent.getLeft()) {
             parent.setLeft(child);
         }
-        if (node == parent.right) {
+        if (node == parent.getRight()) {
             parent.setRight(child);
         }
     }
@@ -115,11 +119,11 @@ public class BinaryTree {
      * @param node
      */
     private void deleteTwoChildren(Node node) {
-        Node follower = min(node.right);
+        Node follower = min(node.getRight());
         node.setKey(follower.getKey());
-        Node child = follower.right;
-        Node parent = follower.parent;
-        if (parent.left == follower) {
+        Node child = follower.getRight();
+        Node parent = follower.getParent();
+        if (parent.getLeft() == follower) {
             parent.setLeft(child);
         } else {
             parent.setRight(child);
@@ -137,9 +141,9 @@ public class BinaryTree {
             return node;
         }
         if (value < node.getKey()) {
-            return search(node.left, value);
+            return search(node.getLeft(), value);
         } else {
-            return search(node.right, value);
+            return search(node.getRight(), value);
         }
     }
 
@@ -150,8 +154,8 @@ public class BinaryTree {
         if (node == null) {
             return -1;
         }
-        int heightLeft = getHeight(node.left);
-        int heightRight = getHeight(node.right);
+        int heightLeft = getHeight(node.getLeft());
+        int heightRight = getHeight(node.getRight());
         if (heightLeft > heightRight) {
             return heightLeft + 1;
         } else {
@@ -166,8 +170,8 @@ public class BinaryTree {
      * @return
      */
     public Node min(Node node) {
-        while (node.left != null) {
-            node = node.left;
+        while (node.getLeft() != null) {
+            node = node.getLeft();
         }
         return node;
     }
@@ -179,8 +183,8 @@ public class BinaryTree {
      * @return
      */
     public Node max(Node node) {
-        while (node.right != null) {
-            node = node.right;
+        while (node.getRight() != null) {
+            node = node.getRight();
         }
         return node;
     }
@@ -190,15 +194,12 @@ public class BinaryTree {
      */
     public void print(Node node) {
         if (node != null) {
-            print(node.left);
+            print(node.getLeft());
             System.out.println(node.getKey());
-            print(node.right);
+            print(node.getRight());
         }
     }
 
-    public Node getRoot() {
-        return root;
-    }
 
     /**
      * Sisäjärjestysläpikäynti.
@@ -206,9 +207,9 @@ public class BinaryTree {
      */
     public void inorder(Node node) {
         if (node != null) {
-            inorder(node.left);
+            inorder(node.getLeft());
             System.out.println(node.getKey());
-            inorder(node.right);
+            inorder(node.getRight());
         }
     }
 
@@ -219,8 +220,8 @@ public class BinaryTree {
     public void preorder(Node node) {
         if (node != null) {
             System.out.println(node.getKey());
-            preorder(node.left);
-            preorder(node.right);
+            preorder(node.getLeft());
+            preorder(node.getRight());
         }
     }
 
@@ -230,13 +231,17 @@ public class BinaryTree {
      */
     public void postorder(Node node) {
         if (node != null) {
-            postorder(node.left);
-            postorder(node.right);
+            postorder(node.getLeft());
+            postorder(node.getRight());
             System.out.println(node.getKey());
         }
     }
     
     public int getSize() {
         return this.size;
+    }
+    
+    public Node getRoot() {
+        return this.root;
     }
 }

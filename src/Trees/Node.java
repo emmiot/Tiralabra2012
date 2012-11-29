@@ -2,10 +2,10 @@ package Trees;
 
 public class Node {
 
-    Node left;
-    Node right;
-    Node parent;
-    int key;
+    private Node left;
+    private Node right;
+    private Node parent;
+    private int key;
     
     public Node() {
         this.left = null;

@@ -1,0 +1,2 @@
+Binääripuulla kesti 10000 alkion lisäämiseen 16 millisekuntia.
+AVL-puulla kesti 10000 alkion lisäämiseen 31 millisekuntia.
