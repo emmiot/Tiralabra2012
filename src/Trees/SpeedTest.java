@@ -22,7 +22,7 @@ public class SpeedTest {
     public SpeedTest() throws FileNotFoundException {
         bintree = new BinaryTree();
         avltree = new AVLTree();
-//        trie = new Trie();
+        trie = new Trie();
         initPW();
     }
 
@@ -45,7 +45,14 @@ public class SpeedTest {
         initList(amount);
         addAmount(bintree, list);
         addAmount(avltree, list);
-//        addAmount(trie, list);
+        addAmount(trie, list);
+    }
+
+    public void deleteValues(int amount) {
+        initList(amount);
+        deleteAmount(bintree, list);
+        deleteAmount(avltree, list);
+        deleteAmount(trie, list);
     }
 
     private void addAmount(Tree tree, ArrayList<Integer> list) {
@@ -56,6 +63,17 @@ public class SpeedTest {
         endTime = System.currentTimeMillis();
         long resultTime = endTime - startTime;
         String result = tree.getName() + ": " + list.size() + " alkion lisäämiseen kesti " + resultTime + " millisekuntia.";
+        pw.println(result);
+    }
+
+    private void deleteAmount(Tree tree, ArrayList<Integer> list) {
+        startTime = System.currentTimeMillis();
+        for (int i = 0; i < list.size(); i++) {
+            tree.delete(list.get(i));
+        }
+        endTime = System.currentTimeMillis();
+        long resultTime = endTime - startTime;
+        String result = tree.getName() + ": " + list.size() + " alkion poistamiseen kesti " + resultTime + " millisekuntia.";
         pw.println(result);
     }
 

@@ -8,10 +8,18 @@ public class Trie implements Tree {
     private TrieNode parent;
     private TrieNode[] nodes;
 
+    /**
+     * Konstruktori. Luo uuden taulukon lapsia varten.
+     */
     public Trie() {
         this.children = new TrieNode[10];
     }
 
+    /**
+     * Lisää parametrina annetun luvun, jos sitä ei jo ole.
+     *
+     * @param value Luku, joka halutaan lisätä.
+     */
     @Override
     public void insert(int value) {
         number = new Integer(value).toString();
@@ -20,53 +28,61 @@ public class Trie implements Tree {
         for (int i = 0; i < number.length(); i++) {
             subStr = number.substring(i, i + 1);
             value = Integer.parseInt(subStr);
-            if (nodes[value - 1] == null) {
-                TrieNode newNode = new TrieNode(value);
-                nodes[value - 1] = newNode;
+            if (nodes[value] == null) {
+                TrieNode newNode = new TrieNode();
+                nodes[value] = newNode;
             }
             if (i == number.length() - 1) {
-                nodes[value - 1].setFinalNode(true);
-                nodes[value - 1].setParent(parent);
+                nodes[value].setFinalNode(true);
+                nodes[value].setParent(parent);
                 break;
             } else {
-                parent = nodes[value - 1];
-                nodes = nodes[value - 1].getChildren();
+                parent = nodes[value];
+                nodes = nodes[value].getChildren();
             }
         }
     }
 
     @Override
     public void delete(int value) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if (search(value)) {
+        }
     }
 
+    /**
+     * Hakee puusta, palauttaa joko true (löytyi) tai false (ei löytynyt).
+     *
+     * @param value Arvo, jota haetaan.
+     * @return
+     */
     public boolean search(int value) {
         number = new Integer(value).toString();
         nodes = this.children;
         for (int i = 0; i < number.length(); i++) {
             subStr = number.substring(i, i + 1);
             value = Integer.parseInt(subStr);
-            if (i == number.length() - 1) {
-                if (nodes[value - 1].isFinalNode()) {
-                    return true;
+            if (nodes[value] != null) {
+                if (i == number.length() - 1) {
+                    if (nodes[value].isFinalNode()) {
+                        return true;
+                    } else {
+                        return false;
+                    }
                 } else {
-                    return false;
+                    nodes = nodes[value].getChildren();
                 }
             } else {
-                nodes = nodes[value - 1].getChildren();
+                return false;
             }
         }
         return false;
     }
 
-    public TrieNode[] getChildren() {
-        return children;
-    }
-
-    public void setChildren(TrieNode[] children) {
-        this.children = children;
-    }
-
+    /**
+     * Puun nimi testejä varten.
+     *
+     * @return
+     */
     @Override
     public String getName() {
         return "Trie";

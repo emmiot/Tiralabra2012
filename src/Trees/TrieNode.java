@@ -3,23 +3,23 @@ package Trees;
 public class TrieNode {
 
     private boolean finalNode;
-    private int key;
     private TrieNode[] children;
     private TrieNode parent;
 
-    public TrieNode(int value) {
-        this.key = value;
+    /**
+     * Konstruktori. Luo lapsitaulukon.
+     *
+     * @param value
+     */
+    public TrieNode() {
         this.children = new TrieNode[10];
     }
 
-    public int getKey() {
-        return key;
-    }
-
-    public void setKey(int key) {
-        this.key = key;
-    }
-
+    /**
+     * Palauttaa viitteen lapsitaulukkoon.
+     *
+     * @return
+     */
     TrieNode[] getChildren() {
         return this.children;
     }
@@ -32,15 +32,16 @@ public class TrieNode {
         this.parent = parent;
     }
 
+    /**
+     * Tarkistaa, onko päätössolmu, eli päättyykö jokin luku tähän solmuun.
+     *
+     * @return
+     */
     public boolean isFinalNode() {
         return finalNode;
     }
 
     public void setFinalNode(boolean finalNode) {
         this.finalNode = finalNode;
-    }
-
-    public TrieNode getThis() {
-        return this;
     }
 }
