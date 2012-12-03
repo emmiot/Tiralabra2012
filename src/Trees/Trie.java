@@ -6,6 +6,7 @@ public class Trie implements Tree {
     private String subStr;
     private String number;
     private TrieNode parent;
+    private TrieNode[] nodes;
 
     public Trie() {
         this.children = new TrieNode[10];
@@ -14,7 +15,7 @@ public class Trie implements Tree {
     @Override
     public void insert(int value) {
         number = new Integer(value).toString();
-        TrieNode[] nodes = this.children;
+        nodes = this.children;
         parent = null;
         for (int i = 0; i < number.length(); i++) {
             subStr = number.substring(i, i + 1);
@@ -25,8 +26,10 @@ public class Trie implements Tree {
             }
             if (i == number.length() - 1) {
                 nodes[value - 1].setFinalNode(true);
+                nodes[value - 1].setParent(parent);
                 break;
             } else {
+                parent = nodes[value - 1];
                 nodes = nodes[value - 1].getChildren();
             }
         }
@@ -35,6 +38,25 @@ public class Trie implements Tree {
     @Override
     public void delete(int value) {
         throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public boolean search(int value) {
+        number = new Integer(value).toString();
+        nodes = this.children;
+        for (int i = 0; i < number.length(); i++) {
+            subStr = number.substring(i, i + 1);
+            value = Integer.parseInt(subStr);
+            if (i == number.length() - 1) {
+                if (nodes[value - 1].isFinalNode()) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                nodes = nodes[value - 1].getChildren();
+            }
+        }
+        return false;
     }
 
     public TrieNode[] getChildren() {
