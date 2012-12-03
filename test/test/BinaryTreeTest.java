@@ -8,10 +8,10 @@ import Trees.BinaryTree;
 import Trees.Node;
 import org.junit.After;
 import org.junit.AfterClass;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -58,13 +58,13 @@ public class BinaryTreeTest {
 
     @Test
     public void etsiminenLöytää() {
-        apunode = bintree.search(bintree.getRoot(), 14);
+        apunode = (Node) bintree.search(bintree.getRoot(), 14);
         assertEquals(14, apunode.getKey());
     }
 
     @Test
     public void etsiminenEiLöydä() {
-        apunode = bintree.search(bintree.getRoot(), 7);
+        apunode = (Node) bintree.search(bintree.getRoot(), 7);
         assertEquals(null, apunode);
     }
 
@@ -104,7 +104,7 @@ public class BinaryTreeTest {
         System.out.println("--------------");
         assertEquals(size2, size - 1);
     }
-    
+
     @Test
     public void lehdenPoistoOnnistuu() {
         int size = bintree.getSize();
@@ -115,7 +115,7 @@ public class BinaryTreeTest {
         System.out.println("--------------");
         assertEquals(size2, size - 1);
     }
-    
+
     @Test
     public void yksiLapsisenPoistoOnnistuu() {
         int size = bintree.getSize();

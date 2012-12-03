@@ -6,7 +6,7 @@ public class Node {
     private Node right;
     private Node parent;
     private int key;
-    
+
     public Node() {
         this.left = null;
         this.right = null;
@@ -14,7 +14,8 @@ public class Node {
     }
 
     /**
-     * Konstruktori. Asettaa avaimen arvon halutuksi. Asettaa vanhemman sekä oikean ja vasemman lapsen tyhjiksi.
+     * Konstruktori. Asettaa avaimen arvon halutuksi. Asettaa vanhemman sekä
+     * oikean ja vasemman lapsen tyhjiksi.
      */
     public Node(int key) {
         this.key = key;
@@ -46,7 +47,7 @@ public class Node {
     public void setKey(int key) {
         this.key = key;
     }
-    
+
     public Node getParent() {
         return parent;
     }

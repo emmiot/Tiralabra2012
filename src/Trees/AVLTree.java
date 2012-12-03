@@ -1,6 +1,6 @@
 package Trees;
 
-public class AVLTree {
+public class AVLTree implements Tree {
 
     private AVLNode root;
     private int size;
@@ -27,6 +27,7 @@ public class AVLTree {
      *
      * @param value Arvo joka halutaan lisätä.
      */
+    @Override
     public void insert(int value) {
         AVLNode newNode = avlInsert(value);
         AVLNode p = newNode.getParent();
@@ -118,6 +119,7 @@ public class AVLTree {
      *
      * @param value Poistettava arvo.
      */
+    @Override
     public void delete(int value) {
         AVLNode node = avlDelete(value);
         AVLNode p = node.getParent();
@@ -341,5 +343,10 @@ public class AVLTree {
         } else {
             return search(node.getRight(), value);
         }
+    }
+
+    @Override
+    public String getName() {
+        return "AVL-puu";
     }
 }

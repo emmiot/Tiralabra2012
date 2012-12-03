@@ -1,6 +1,6 @@
 package Trees;
 
-public class BinaryTree {
+public class BinaryTree implements Tree {
 
     private Node root;
     private int size;
@@ -13,8 +13,10 @@ public class BinaryTree {
     }
 
     /**
-     * Kuormitettu konstruktori, jolle voidaan antaa arvo, joka asetetaan juureksi.
-     * @param rootValue 
+     * Kuormitettu konstruktori, jolle voidaan antaa arvo, joka asetetaan
+     * juureksi.
+     *
+     * @param rootValue
      */
     public BinaryTree(int rootValue) {
         this.size = 0;
@@ -22,8 +24,10 @@ public class BinaryTree {
     }
 
     /**
-     * Lisää halutun alkion ja kasvattaa puun kokoa. Jos alkio on jo puussa, ei tehdä mitään.
+     * Lisää halutun alkion ja kasvattaa puun kokoa. Jos alkio on jo puussa, ei
+     * tehdä mitään.
      */
+    @Override
     public void insert(int value) {
         if (root == null) {
             root = new Node(value);
@@ -53,10 +57,12 @@ public class BinaryTree {
     }
 
     /**
-     * Poistaa halutun alkion, jos sellainen löytyy puusta, muuten ei tee mitään.
+     * Poistaa halutun alkion, jos sellainen löytyy puusta, muuten ei tee
+     * mitään.
      */
+    @Override
     public void delete(int value) {
-        Node node = search(this.root, value);
+        Node node = (Node) search(this.root, value);
         if (node != null) {
             if (node.getLeft() == null && node.getRight() == null) {
                 deleteNoChildren(node);
@@ -65,7 +71,7 @@ public class BinaryTree {
             } else {
                 deleteTwoChildren(node);
             }
-            size --;
+            size--;
         }
     }
 
@@ -78,11 +84,9 @@ public class BinaryTree {
         Node parent = node.getParent();
         if (parent == null) {
             this.root = null;
-        }
-        else if (node == parent.getLeft()) {
+        } else if (node == parent.getLeft()) {
             parent.setLeft(null);
-        }
-        else {
+        } else {
             parent.setRight(null);
         }
     }
@@ -96,8 +100,7 @@ public class BinaryTree {
         Node child;
         if (node.getLeft() != null) {
             child = node.getLeft();
-        }
-        else {
+        } else {
             child = node.getRight();
         }
         Node parent = node.getParent();
@@ -200,10 +203,10 @@ public class BinaryTree {
         }
     }
 
-
     /**
      * Sisäjärjestysläpikäynti.
-     * @param node 
+     *
+     * @param node
      */
     public void inorder(Node node) {
         if (node != null) {
@@ -215,7 +218,8 @@ public class BinaryTree {
 
     /**
      * Esijärjestysläpikäynti.
-     * @param node 
+     *
+     * @param node
      */
     public void preorder(Node node) {
         if (node != null) {
@@ -227,7 +231,8 @@ public class BinaryTree {
 
     /**
      * Jälkijärjestysläpikäynti.
-     * @param node 
+     *
+     * @param node
      */
     public void postorder(Node node) {
         if (node != null) {
@@ -236,12 +241,17 @@ public class BinaryTree {
             System.out.println(node.getKey());
         }
     }
-    
+
     public int getSize() {
         return this.size;
     }
-    
+
     public Node getRoot() {
         return this.root;
+    }
+
+    @Override
+    public String getName() {
+        return "Binääripuu";
     }
 }
