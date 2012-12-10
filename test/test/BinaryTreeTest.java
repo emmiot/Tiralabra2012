@@ -58,13 +58,13 @@ public class BinaryTreeTest {
 
     @Test
     public void etsiminenLöytää() {
-        apunode = (Node) bintree.searchBin(bintree.getRoot(), 14);
+        apunode = bintree.searchBin(bintree.getRoot(), 14);
         assertEquals(14, apunode.getKey());
     }
 
     @Test
     public void etsiminenEiLöydä() {
-        apunode = (Node) bintree.searchBin(bintree.getRoot(), 7);
+        apunode = bintree.searchBin(bintree.getRoot(), 7);
         assertEquals(null, apunode);
     }
 
@@ -76,13 +76,14 @@ public class BinaryTreeTest {
         assertEquals(size2, size + 1);
     }
 
-//    @Test
-//    public void poistoPienentääKokoa() {
-//        int size = bintree.getSize();
-//        bintree.delete(15);
-//        int size2 = bintree.getSize();
-//        assertEquals(size2, size-1);
-//    }
+    @Test
+    public void poistoPienentääKokoa() {
+        int size = bintree.getSize();
+        bintree.delete(15);
+        int size2 = bintree.getSize();
+        assertEquals(size2, size - 1);
+    }
+    
     @Test
     public void toisenKaksilapsisenPoistoOnnistuu() {
         int size = bintree.getSize();

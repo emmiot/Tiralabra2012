@@ -1,0 +1,12 @@
+Binääripuu: 30 alkion lisääminen kesti 1 millisekuntia.
+AVL-puu: 30 alkion lisääminen kesti 1 millisekuntia.
+Trie: 30 alkion lisääminen kesti 12 millisekuntia.
+----------------
+Binääripuu: 3 alkion hakeminen kesti 0 millisekuntia.
+AVL-puu: 3 alkion hakeminen kesti 0 millisekuntia.
+Trie: 3 alkion hakeminen kesti 0 millisekuntia.
+----------------
+Binääripuu: 3 alkion poistaminen kesti 0 millisekuntia.
+AVL-puu: 3 alkion poistaminen kesti 0 millisekuntia.
+Trie: 3 alkion poistaminen kesti 0 millisekuntia.
+----------------

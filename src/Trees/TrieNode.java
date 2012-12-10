@@ -10,6 +10,7 @@ public class TrieNode {
     private boolean finalNode;
     private TrieNode[] children;
     private TrieNode parent;
+    private int key;
 
     /**
      * Konstruktori. Luo lapsitaulukon.
@@ -17,6 +18,16 @@ public class TrieNode {
      * @param value
      */
     public TrieNode() {
+        this.children = new TrieNode[10];
+    }
+
+    /**
+     * Kuormitettu konstruktori, joka lisää myös avaimelle arvon.
+     *
+     * @param value
+     */
+    public TrieNode(int value) {
+        this.key = value;
         this.children = new TrieNode[10];
     }
 
@@ -43,8 +54,8 @@ public class TrieNode {
     }
 
     public void add(int index) {
-        TrieNode node = new TrieNode();
-        children[index] = node;
+        TrieNode node = new TrieNode(index);
+        this.children[index] = node;
     }
 
     public TrieNode getChild(int index) {
@@ -74,5 +85,26 @@ public class TrieNode {
 
     public void setFinalNode(boolean finalNode) {
         this.finalNode = finalNode;
+    }
+
+    public int getKey() {
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
+    }
+
+    public void print() {
+        System.out.println("Tämän solmun avain on: " + this.key);
+        System.out.println("Tämän solmun vanhempi on: " + this.parent.getKey());
+        System.out.println("Tämän solmun lapset ovat: ");
+        for (int i = 0; i < children.length; i++) {
+            if (children[i] == null) {
+                System.out.println("null");
+            } else {
+                System.out.println(children[i].getKey());
+            }
+        }
     }
 }

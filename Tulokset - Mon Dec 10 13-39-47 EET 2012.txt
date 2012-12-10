@@ -1,0 +1,300 @@
+Binääripuu: 500000 alkion lisääminen kesti 279 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 451 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 909 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 220 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 261 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 302 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 226 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 456 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 494 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 296 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 425 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 772 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 238 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 241 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 261 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 235 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 405 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 428 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 301 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 394 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 293 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 235 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 242 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 288 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 244 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 422 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 410 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 285 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 368 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 1048 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 233 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 236 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 214 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 233 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 485 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 481 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 303 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 424 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 304 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 238 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 239 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 383 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 229 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 473 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 405 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 285 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 364 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 272 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 232 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 231 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 376 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 228 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 388 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 422 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 293 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 495 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 375 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 233 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 235 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 363 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 278 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 402 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 505 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 262 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 451 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 264 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 311 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 233 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 363 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 301 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 392 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 497 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 295 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 410 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 367 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 233 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 387 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 361 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 231 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 391 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 579 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 389 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 374 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 378 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 230 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 233 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 405 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 229 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 518 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 581 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 364 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 440 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 432 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 234 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 231 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 486 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 230 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 400 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 551 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 430 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 616 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 487 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 429 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 365 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 457 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 233 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 532 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 772 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 527 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 854 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 729 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 399 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 406 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 630 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 314 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 582 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 776 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 323 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 718 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 793 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 376 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 280 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 496 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 390 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 893 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 751 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 404 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 641 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 598 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 305 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 292 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 443 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 364 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 625 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 764 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 446 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 531 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 674 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 329 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 396 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 591 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 319 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 532 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 688 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 452 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 533 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 574 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 234 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 459 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 421 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 351 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 514 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 665 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 429 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 574 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 715 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 333 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 385 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 501 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 356 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 566 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 919 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 564 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 809 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 618 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 234 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 360 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 541 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 357 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 567 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 765 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 291 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 650 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 636 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 353 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 355 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 452 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 349 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 566 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 708 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 597 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 514 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 784 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 397 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 315 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 581 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 352 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 629 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 960 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 503 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 667 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 562 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 355 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 438 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 516 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 307 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 485 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 802 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 471 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 732 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 783 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 359 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 525 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 458 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 352 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 608 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 626 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 463 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 658 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 715 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 262 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 410 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 663 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 322 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 646 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 812 millisekuntia.
+----------------
+Binääripuu: 500000 alkion lisääminen kesti 507 millisekuntia.
+AVL-puu: 500000 alkion lisääminen kesti 569 millisekuntia.
+Trie: 500000 alkion lisääminen kesti 719 millisekuntia.
+----------------
+Binääripuu: 500000 alkion hakeminen kesti 231 millisekuntia.
+AVL-puu: 500000 alkion hakeminen kesti 232 millisekuntia.
+Trie: 500000 alkion hakeminen kesti 447 millisekuntia.
+----------------
+Binääripuu: 500000 alkion poistaminen kesti 230 millisekuntia.
+AVL-puu: 500000 alkion poistaminen kesti 690 millisekuntia.
+Trie: 500000 alkion poistaminen kesti 800 millisekuntia.
+----------------

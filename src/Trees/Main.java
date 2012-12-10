@@ -6,9 +6,11 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
         SpeedTest speed = new SpeedTest();
-        speed.addValues(10000);
-        speed.searchValues(10000);
-        speed.deleteValues(10000);
+        for (int i = 0; i < 10; i++) {
+            speed.addValues(10000);
+            speed.searchValues(10000);
+            speed.deleteValues(10000);
+        }
         speed.testausValmis();
     }
 }

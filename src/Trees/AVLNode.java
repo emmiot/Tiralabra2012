@@ -37,6 +37,24 @@ public class AVLNode {
         this.height = 0;
     }
 
+    /**
+     * Tarkistaa, onko solmu tasapainossa.
+     *
+     * @return
+     */
+    public boolean isBalanced() {
+        int heightLeft = left.getHeight();
+        int heightRight = right.getHeight();
+        if (heightRight > heightLeft + 1 || heightLeft > heightRight + 1) {
+            return false;
+        }
+        else if (heightRight == heightLeft + 1 || heightLeft == heightRight + 1) {
+            return true;
+        } else {
+            return true;
+        }
+    }
+
     public int getHeight() {
         return height;
     }

@@ -4,6 +4,7 @@
  */
 package test;
 
+import Trees.Node;
 import Trees.Trie;
 import Trees.TrieNode;
 import org.junit.After;
@@ -49,9 +50,19 @@ public class TrieTest {
     @After
     public void tearDown() {
     }
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void etsiminenLöytää() {
+        assertEquals(true, trie.search(965));
+    }
+    
+    @Test
+    public void etsiminenEiLöydä() {
+        assertEquals(false, trie.search(96));
+    }
+    
+    @Test
+    public void poistoPoistaaOikean() {
+        trie.delete(965);
+        assertFalse(trie.search(965));
+    }
 }

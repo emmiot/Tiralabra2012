@@ -437,6 +437,14 @@ public class AVLTree implements Tree {
         }
     }
 
+    public AVLNode getRoot() {
+        return root;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
     /**
      * Puun nimi testejä varten.
      *

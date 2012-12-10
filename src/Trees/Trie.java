@@ -17,7 +17,7 @@ public class Trie implements Tree {
      * Konstruktori. Luo juureen uuden TrieNoden.
      */
     public Trie() {
-        this.root = new TrieNode();
+        this.root = new TrieNode(-1);
     }
 
     /**
@@ -29,20 +29,18 @@ public class Trie implements Tree {
     public void insert(int value) {
         number = new Integer(value).toString();
         node = this.root;
-        parent = root;
+        parent = this.root;
         for (int i = 0; i < number.length(); i++) {
             subStr = number.substring(i, i + 1);
             value = Integer.parseInt(subStr);
             if (!node.has(value)) {
                 node.add(value);
             }
+            parent = node;
+            node = node.getChild(value);
+            node.setParent(parent);
             if (i == number.length() - 1) {
-                node.getChild(value).setFinalNode(true);
-                node.getChild(value).setParent(parent);
-                break;
-            } else {
-                parent = node;
-                node = node.getChild(value);
+                node.setFinalNode(true);
             }
         }
     }
@@ -106,24 +104,19 @@ public class Trie implements Tree {
             subStr = number.substring(i, i + 1);
             value = Integer.parseInt(subStr);
             if (node.getChild(value) != null) {
+                node = node.getChild(value);
                 if (i == number.length() - 1) {
                     if (node.isFinalNode()) {
                         return true;
                     } else {
                         return false;
                     }
-                } else {
-                    node = node.getChild(value);
                 }
             } else {
                 return false;
             }
         }
         return false;
-    }
-    
-    public void print(TrieNode node) {
-        
     }
 
     /**
