@@ -58,13 +58,13 @@ public class BinaryTreeTest {
 
     @Test
     public void etsiminenLöytää() {
-        apunode = (Node) bintree.search(bintree.getRoot(), 14);
+        apunode = (Node) bintree.searchBin(bintree.getRoot(), 14);
         assertEquals(14, apunode.getKey());
     }
 
     @Test
     public void etsiminenEiLöydä() {
-        apunode = (Node) bintree.search(bintree.getRoot(), 7);
+        apunode = (Node) bintree.searchBin(bintree.getRoot(), 7);
         assertEquals(null, apunode);
     }
 

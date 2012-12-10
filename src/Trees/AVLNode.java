@@ -1,5 +1,10 @@
 package Trees;
 
+/**
+ * AVL-puun solmu. Sisältää tiedon korkeudestaan.
+ *
+ * @author Emmi
+ */
 public class AVLNode {
 
     private AVLNode left;
@@ -8,6 +13,9 @@ public class AVLNode {
     private int key;
     private int height;
 
+    /**
+     * Konstruktori. Asettaa kaikki arvot tyhjäksi/nollaksi.
+     */
     public AVLNode() {
         this.left = null;
         this.right = null;
@@ -15,6 +23,12 @@ public class AVLNode {
         this.height = 0;
     }
 
+    /**
+     * Kuormitettu konstruktori, joka asettaa halutun arvon avaimeksi, ja muut
+     * arvot tyhjäksi/nollaksi.
+     *
+     * @param key
+     */
     public AVLNode(int key) {
         this.key = key;
         this.left = null;

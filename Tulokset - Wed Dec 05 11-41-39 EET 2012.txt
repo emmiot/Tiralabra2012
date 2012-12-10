@@ -1,0 +1,4 @@
+Binääripuu: 10000 alkion lisääminen kesti 31 millisekuntia.
+AVL-puu: 10000 alkion lisääminen kesti 62 millisekuntia.
+Trie: 10000 alkion lisääminen kesti 32 millisekuntia.
+----------------

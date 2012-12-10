@@ -1,5 +1,10 @@
 package Trees;
 
+/**
+ * AVL-puu.
+ *
+ * @author Emmi
+ */
 public class AVLTree implements Tree {
 
     private AVLNode root;
@@ -15,7 +20,7 @@ public class AVLTree implements Tree {
     /**
      * Kuormitettu konstruktori, jossa voi asettaa halutun arvon juureksi.
      *
-     * @param rootValue Arvo joka halutaan juureksi.
+     * @param rootValue Arvo, joka halutaan juureksi.
      */
     public AVLTree(int rootValue) {
         this.size = 0;
@@ -78,7 +83,7 @@ public class AVLTree implements Tree {
     }
 
     /**
-     * AVL-insertin apumetodi, jossa varsinainen lisäys tapahtuu.
+     * Insertin apumetodi, jossa varsinainen lisäys tapahtuu.
      *
      * @param value
      */
@@ -87,7 +92,7 @@ public class AVLTree implements Tree {
             root = new AVLNode(value);
             size++;
             return root;
-        } else if (search(root, value) != null) {
+        } else if (searchAVL(root, value) != null) {
             System.out.println("Arvo oli jo puussa.");
             return null;
         } else {
@@ -160,10 +165,13 @@ public class AVLTree implements Tree {
     }
 
     /**
-     * avlDeleten apumetodi, joka suorittaa varsinaisen poiston.
+     * Deleten apumetodi, joka suorittaa varsinaisen poiston.
+     *
+     * @param value
+     * @return
      */
     private AVLNode avlDelete(int value) {
-        AVLNode node = search(this.root, value);
+        AVLNode node = searchAVL(this.root, value);
         if (node != null) {
             if (node.getLeft() == null && node.getRight() == null) {
                 node = deleteNoChildren(node);
@@ -322,29 +330,118 @@ public class AVLTree implements Tree {
         return n2;
     }
 
+    /**
+     * Oikeavasenkierto.
+     *
+     * @param n1
+     * @return
+     */
     public AVLNode rightLeftRotate(AVLNode n1) {
         AVLNode n2 = n1.getRight();
         n1.setRight(rightRotate(n2));
         return leftRotate(n1);
     }
 
+    /**
+     * Vasenoikeakierto.
+     *
+     * @param n1
+     * @return
+     */
     public AVLNode leftRightRotate(AVLNode n1) {
         AVLNode n2 = n1.getLeft();
         n1.setLeft(leftRotate(n2));
         return rightRotate(n1);
     }
 
-    public AVLNode search(AVLNode node, int value) {
+    /**
+     * Etsimistoiminto aikatestauskäyttöön. Muuten sama kuin puun itsensä
+     * käyttämä searchAVL, mutta palauttaa boolean-arvon solmun sijaan, jotta
+     * toteuttaa rajapinnan.
+     *
+     * @param value
+     */
+    @Override
+    public boolean search(int value) {
+        return booleanSearch(root, value);
+    }
+
+    private boolean booleanSearch(AVLNode node, int value) {
+        if (node == null) {
+            return false;
+        }
+        if (node.getKey() == value) {
+            return true;
+        }
+        if (value < node.getKey()) {
+            return booleanSearch(node.getLeft(), value);
+        } else {
+            return booleanSearch(node.getRight(), value);
+        }
+    }
+
+    /**
+     * Rekursiivinen etsimistoiminto puun omaan käyttöön, palauttaa AVLNoden.
+     *
+     * @param node
+     * @param value
+     * @return
+     */
+    public AVLNode searchAVL(AVLNode node, int value) {
         if (node == null || node.getKey() == value) {
             return node;
         }
         if (value < node.getKey()) {
-            return search(node.getLeft(), value);
+            return searchAVL(node.getLeft(), value);
         } else {
-            return search(node.getRight(), value);
+            return searchAVL(node.getRight(), value);
         }
     }
 
+    /**
+     * Sisäjärjestysläpikäynti.
+     *
+     * @param node
+     */
+    public void inorder(AVLNode node) {
+        if (node != null) {
+            inorder(node.getLeft());
+            System.out.println(node.getKey());
+            inorder(node.getRight());
+        }
+    }
+
+    /**
+     * Esijärjestysläpikäynti.
+     *
+     * @param node
+     */
+    public void preorder(AVLNode node) {
+        if (node != null) {
+            System.out.println(node.getKey());
+            preorder(node.getLeft());
+            preorder(node.getRight());
+        }
+    }
+
+    /**
+     * Jälkijärjestysläpikäynti.
+     *
+     * @param node
+     */
+    public void postorder(AVLNode node) {
+        if (node != null) {
+            postorder(node.getLeft());
+            postorder(node.getRight());
+            System.out.println(node.getKey());
+        }
+    }
+
+    /**
+     * Puun nimi testejä varten.
+     *
+     * @return
+     */
     @Override
     public String getName() {
         return "AVL-puu";

@@ -43,8 +43,7 @@ public class TrieTest {
         trie.insert(1);
         trie.insert(965);
         trie.insert(966);
-        System.out.println(trie.search(0));
-        System.out.println(trie.search(965));
+        trie.insert(9);
     }
 
     @After

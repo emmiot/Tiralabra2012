@@ -1,5 +1,10 @@
 package Trees;
 
+/**
+ * Binäärihakupuu.
+ *
+ * @author Emmi
+ */
 public class BinaryTree implements Tree {
 
     private Node root;
@@ -32,7 +37,7 @@ public class BinaryTree implements Tree {
         if (root == null) {
             root = new Node(value);
             size++;
-        } else if (search(root, value) != null) {
+        } else if (searchBin(root, value) != null) {
             System.out.println("Arvo oli jo puussa.");
         } else {
             Node node = root;
@@ -62,7 +67,7 @@ public class BinaryTree implements Tree {
      */
     @Override
     public void delete(int value) {
-        Node node = (Node) search(this.root, value);
+        Node node = searchBin(this.root, value);
         if (node != null) {
             if (node.getLeft() == null && node.getRight() == null) {
                 deleteNoChildren(node);
@@ -104,15 +109,21 @@ public class BinaryTree implements Tree {
             child = node.getRight();
         }
         Node parent = node.getParent();
-        child.setParent(parent);
         if (parent == null) {
             this.root = child;
-        }
-        if (node == parent.getLeft()) {
-            parent.setLeft(child);
-        }
-        if (node == parent.getRight()) {
-            parent.setRight(child);
+            child.setParent(null);
+        } else {
+            child.setParent(parent);
+            if (parent.getLeft() != null) {
+                if (node == parent.getLeft()) {
+                    parent.setLeft(child);
+                }
+            }
+            if (parent.getRight() != null) {
+                if (node == parent.getRight()) {
+                    parent.setRight(child);
+                }
+            }
         }
     }
 
@@ -137,16 +148,48 @@ public class BinaryTree implements Tree {
     }
 
     /**
-     * Etsii ja palauttaa halutun alkion, jos sellainen löytyy.
+     * Etsimistoiminto aikatestauskäyttöön. Muuten sama kuin puun itsensä
+     * käyttämä searchBin, mutta palauttaa boolean-arvon solmun sijaan, jotta
+     * toteuttaa rajapinnan.
+     *
+     * @param value Arvo, joka halutaan etsiä.
+     * @return
      */
-    public Node search(Node node, int value) {
+    @Override
+    public boolean search(int value) {
+        return booleanSearch(root, value);
+    }
+
+    private boolean booleanSearch(Node node, int value) {
+        if (node == null) {
+            return false;
+        }
+        if (node.getKey() == value) {
+            return true;
+        }
+        if (value < node.getKey()) {
+            return booleanSearch(node.getLeft(), value);
+        } else {
+            return booleanSearch(node.getRight(), value);
+        }
+    }
+
+    /**
+     * Etsimistoiminto puun omaan käyttöön. Etsii ja palauttaa halutun alkion,
+     * jos sellainen löytyy.
+     *
+     * @param node Solmu, josta lähdetään etsimään.
+     * @param value Arvo, jota halutaan etsiä.
+     * @return
+     */
+    public Node searchBin(Node node, int value) {
         if (node == null || node.getKey() == value) {
             return node;
         }
         if (value < node.getKey()) {
-            return search(node.getLeft(), value);
+            return searchBin(node.getLeft(), value);
         } else {
-            return search(node.getRight(), value);
+            return searchBin(node.getRight(), value);
         }
     }
 
@@ -250,6 +293,11 @@ public class BinaryTree implements Tree {
         return this.root;
     }
 
+    /**
+     * Puun nimi testejä varten.
+     *
+     * @return
+     */
     @Override
     public String getName() {
         return "Binääripuu";

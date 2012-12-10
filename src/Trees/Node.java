@@ -1,5 +1,10 @@
 package Trees;
 
+/**
+ * Binäärihakupuun solmu.
+ *
+ * @author Emmi
+ */
 public class Node {
 
     private Node left;
@@ -7,6 +12,9 @@ public class Node {
     private Node parent;
     private int key;
 
+    /**
+     * Konstruktori. Asettaa vanhemman sekä oikean ja vasemman lapsen tyhjiksi.
+     */
     public Node() {
         this.left = null;
         this.right = null;

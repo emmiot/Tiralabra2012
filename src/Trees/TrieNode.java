@@ -1,5 +1,10 @@
 package Trees;
 
+/**
+ * Trie-puun solmu.
+ *
+ * @author Emmi
+ */
 public class TrieNode {
 
     private boolean finalNode;
@@ -20,8 +25,34 @@ public class TrieNode {
      *
      * @return
      */
-    TrieNode[] getChildren() {
+    public TrieNode[] getChildren() {
         return this.children;
+    }
+
+    /**
+     * Tarkistaa, löytyykö haluttu arvo solmun lapsista.
+     *
+     * @param value
+     * @return
+     */
+    public boolean has(int value) {
+        if (children[value] != null) {
+            return true;
+        }
+        return false;
+    }
+
+    public void add(int index) {
+        TrieNode node = new TrieNode();
+        children[index] = node;
+    }
+
+    public TrieNode getChild(int index) {
+        return children[index];
+    }
+
+    public void setChild(int index, TrieNode node) {
+        children[index] = node;
     }
 
     public TrieNode getParent() {
