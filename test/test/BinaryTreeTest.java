@@ -14,6 +14,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
+ * Binääripuun testitiedosto.
  *
  * @author Emmi
  */
@@ -83,7 +84,7 @@ public class BinaryTreeTest {
         int size2 = bintree.getSize();
         assertEquals(size2, size - 1);
     }
-    
+
     @Test
     public void toisenKaksilapsisenPoistoOnnistuu() {
         int size = bintree.getSize();

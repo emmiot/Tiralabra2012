@@ -14,11 +14,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
+ * AVL-puun testitiedosto.
  *
  * @author Emmi
  */
 public class AVLTreeTest {
-    
+
     private AVLTree avltree;
     private AVLNode node;
 
@@ -57,12 +58,12 @@ public class AVLTreeTest {
         node = avltree.searchAVL(avltree.getRoot(), 14);
         assertEquals(14, node.getKey());
     }
-    
+
     @Test
     public void juuriOnTasapainossa() {
         assertTrue(avltree.getRoot().isBalanced());
     }
-    
+
     @Test
     public void juuriPysyyTasapainossaPoistonYhteydessä() {
         avltree.delete(32);

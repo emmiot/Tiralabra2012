@@ -53,6 +53,11 @@ public class TrieNode {
         return false;
     }
 
+    /**
+     * Lisää halutun lapsen.
+     *
+     * @param index
+     */
     public void add(int index) {
         TrieNode node = new TrieNode(index);
         this.children[index] = node;
@@ -95,6 +100,9 @@ public class TrieNode {
         this.key = key;
     }
 
+    /**
+     * Testauskäyttöön tarkoitettu metodi, joka tulostaa solmun sisällön.
+     */
     public void print() {
         System.out.println("Tämän solmun avain on: " + this.key);
         System.out.println("Tämän solmun vanhempi on: " + this.parent.getKey());

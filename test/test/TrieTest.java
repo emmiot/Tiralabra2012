@@ -15,6 +15,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
+ * Trien testitiedosto.
  *
  * @author Emmi
  */
@@ -50,16 +51,17 @@ public class TrieTest {
     @After
     public void tearDown() {
     }
+
     @Test
     public void etsiminenLöytää() {
         assertEquals(true, trie.search(965));
     }
-    
+
     @Test
     public void etsiminenEiLöydä() {
         assertEquals(false, trie.search(96));
     }
-    
+
     @Test
     public void poistoPoistaaOikean() {
         trie.delete(965);

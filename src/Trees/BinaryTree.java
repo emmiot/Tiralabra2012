@@ -153,7 +153,7 @@ public class BinaryTree implements Tree {
      * toteuttaa rajapinnan.
      *
      * @param value Arvo, joka halutaan etsiä.
-     * @return
+     * @return True tai false.
      */
     @Override
     public boolean search(int value) {
@@ -180,7 +180,7 @@ public class BinaryTree implements Tree {
      *
      * @param node Solmu, josta lähdetään etsimään.
      * @param value Arvo, jota halutaan etsiä.
-     * @return
+     * @return Node, johon päädyttiin, tai null, jos ei löytynyt.
      */
     public Node searchBin(Node node, int value) {
         if (node == null || node.getKey() == value) {
@@ -213,7 +213,7 @@ public class BinaryTree implements Tree {
      * Palauttaa syötteeksi saadun solmun alipuiden pienimmän arvon.
      *
      * @param node
-     * @return
+     * @return Syötteeksi saadun solmun alipuiden pienin arvo.
      */
     public Node min(Node node) {
         while (node.getLeft() != null) {
@@ -226,7 +226,7 @@ public class BinaryTree implements Tree {
      * Palauttaa syötteeksi saadun solmun alipuiden suurimman arvon.
      *
      * @param node
-     * @return
+     * @return Syötteeksi saadun solmun alipuiden suurin arvo.
      */
     public Node max(Node node) {
         while (node.getRight() != null) {
@@ -249,7 +249,7 @@ public class BinaryTree implements Tree {
     /**
      * Sisäjärjestysläpikäynti.
      *
-     * @param node
+     * @param node Juuri
      */
     public void inorder(Node node) {
         if (node != null) {
@@ -262,7 +262,7 @@ public class BinaryTree implements Tree {
     /**
      * Esijärjestysläpikäynti.
      *
-     * @param node
+     * @param node Juuri
      */
     public void preorder(Node node) {
         if (node != null) {
@@ -275,7 +275,7 @@ public class BinaryTree implements Tree {
     /**
      * Jälkijärjestysläpikäynti.
      *
-     * @param node
+     * @param node Juuri
      */
     public void postorder(Node node) {
         if (node != null) {
@@ -296,7 +296,7 @@ public class BinaryTree implements Tree {
     /**
      * Puun nimi testejä varten.
      *
-     * @return
+     * @return Puun nimi testejä varten.
      */
     @Override
     public String getName() {
